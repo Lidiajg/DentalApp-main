@@ -1,0 +1,51 @@
+<ion-header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light container-lg">
+    <div class="container-fluid">
+      <div class="navbar-brand" routerLink="/">
+        <img src="../../../assets/Dento_Logo.png" class="navbar-image" />
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/home">INICIO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/segundoHome">TRATAMIENTOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/users">USUARIOS</a>
+          </li>
+          <ng-container *ngIf="isListLikes()">
+            <li class="nav-item" >
+              <a class="nav-link" aria-current="page" routerLink="/favorites">Favoritos</a>
+            </li>
+          </ng-container>
+        </ul>
+        <ng-container *ngIf="!isLoged; else isloged">
+          <div class="d-flex gap-2">
+            <button type="button" class="btn btn-login" routerLink="/signUp">
+              Registrarme
+            </button>
+            <button type="button" class="btn btn-signIn" routerLink="/signIn">
+              Entrar
+            </button>
+          </div>
+        </ng-container>
+        <ng-template #isloged>
+          <div class="d-flex gap-2">
+            <figure (click)="userProfile()">
+              <img [src]="user.image" class="navbar-image" alt="{{ user.name + user.lastname }}" />
+            </figure>
+            <button type="button" class="btn btn-signIn" (click)="logOut()">
+              Cerrar sesion
+            </button>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </nav>
+</ion-header>

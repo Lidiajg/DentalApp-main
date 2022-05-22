@@ -1,0 +1,8 @@
+{
+  "name": "dentalApp",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

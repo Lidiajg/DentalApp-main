@@ -1,0 +1,148 @@
+<section
+  id="wrapper"
+  class="login-register login-sidebar"
+  style="background-image: url(../../../../assets/login-register2.jpg)"
+>
+  <div class="login-box card">
+    <div class="card-body">
+      <form
+        class="form-horizontal form-material"
+        id="loginform"
+        [formGroup]="registerForm"
+        (ngSubmit)="createUser()"
+      >
+        <a routerLink="/home" class="text-center db"
+          ><img
+            src="../../../../assets/Dento_Logo.png"
+            alt="Home"
+            class="card-img"
+        /></a>
+        <small>Crea tu cuenta y disfruta</small>
+        <div class="form-group m-t-20">
+          <div class="col-xs-12">
+            <ion-input
+              class="form-control"
+              type="text"
+              placeholder="Nombre"
+              formControlName="name"
+            ></ion-input>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-12">
+            <ion-input
+              class="form-control"
+              type="text"
+              placeholder="Apellidos"
+              formControlName="lastName"
+            ></ion-input>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-12">
+            <ion-select
+              (change)="changeCity($event)"
+              formControlName="type"
+              placeholder="Seleciona el tipo de usuario"
+            >
+              <ion-select-option *ngFor="let type of types" [value]="type">
+                {{ type }}
+              </ion-select-option>
+            </ion-select>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-12">
+            <ion-input
+              class="form-control"
+              type="email"
+              placeholder="Email"
+              formControlName="email"
+            ></ion-input>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-12">
+            <ion-input
+              class="form-control"
+              type="password"
+              placeholder="Contraseña"
+              formControlName="password"
+            ></ion-input>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-12">
+            <ion-input
+              class="form-control"
+              type="password"
+              placeholder="Confirma contraseña"
+              formControlName="confirmPassword"
+            ></ion-input>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-12">
+            <div class="img-contain">
+              <img id="imageDefault" class="img" />
+            </div>
+            <ion-fab horizontal="center" slot="fixed">
+              <ion-fab-button (click)="addPhotoToGallery()">
+                <ion-icon name="camera"></ion-icon>
+              </ion-fab-button>
+            </ion-fab>
+          </div>
+        </div>
+        <div class="form-group row mt-4">
+          <div class="col-md-12">
+            <div class="checkbox checkbox-primary p-t-0">
+              <ion-checkbox
+                color="primary"
+                id="checkbox-signup"
+                type="checkbox"
+                class="me-2"
+                formControlName="terms"
+              ></ion-checkbox>
+              <label for="checkbox-signup">
+                Estoy de acuerdo con todos los <a href="#">terminos</a></label
+              >
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-danger">
+            <p *ngIf="formNotValid('name')">* El nombre es obligatorio</p>
+            <p *ngIf="formNotValid('lastName')">* El apellido es obligatorio</p>
+            <p *ngIf="formNotValid('type')">* Seleciona un tipo</p>
+            <p *ngIf="formNotValid('email')">
+              * El correo electrónico es obligatorio y debe ser válido
+            </p>
+            <p *ngIf="formNotValid('password')">
+              * La contraseña debe tener mas de 6 caracteres
+            </p>
+            <p *ngIf="passwordsNotValid()">* Las contraseñas deben de ser las mismas</p>
+            <p *ngIf="aceptTerms()">* Debes aceptar las condiciones de uso</p>
+          </div>
+        </div>
+        <div class="form-group text-center m-t-20">
+          <div class="col-xs-12">
+            <button
+              class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light"
+              type="submit"
+            >
+              Registrarme
+            </button>
+          </div>
+        </div>
+        <div class="form-group m-b-0">
+          <div class="col-sm-12 text-center">
+            <p>
+              ¿Ya tienes una cuenta?
+              <a routerLink="/signIn" class="text-info m-l-5"><b>Sign In</b></a>
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

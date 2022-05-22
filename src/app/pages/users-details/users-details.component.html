@@ -1,0 +1,26 @@
+<div class="container-user">
+  <ion-content fullscreen>
+    <div class="container">
+      <div class="image">
+        <img [src]="user.image" alt="#" />
+      </div>
+      <div class="doctor-left-bar">
+        <div class="single-bar flex">
+          <div class="data">
+            <h4>Nombre completo</h4>
+            <p>{{ user.name }} {{ user.lastname }}</p>
+          </div>
+          <div class="data" *ngIf="this.loggedUser">
+            <ion-toggle [(ngModel)]="like" (click)="setLike()"></ion-toggle>
+          </div>
+        </div>
+        <div class="single-bar">
+          <h4>Informacion adiconal</h4>
+          <p><strong>uid:</strong> {{ user.uid }}</p>
+          <p><strong>email:</strong> {{ user.email }}</p>
+          <p><strong>tipo:</strong> {{ user.type }}</p>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</div>

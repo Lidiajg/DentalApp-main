@@ -1,0 +1,24 @@
+.container-users {
+  margin-top: 100px;
+}
+ion-card {
+  text-align: center;
+}
+img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+ion-item::part(native) {
+  display: flex;
+  flex-direction: column;
+}
+ion-avatar {
+  width: 180px;
+  height: 180px;
+}
+.textSkeleton{
+    display: flex;
+    align-items: center;
+}

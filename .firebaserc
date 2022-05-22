@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "angularfire-14c89"
+  },
+  "targets": {
+    "angularfire-14c89": {
+      "hosting": {
+        "app": [
+          "angularfire-14c89"
+        ]
+      }
+    }
+  }
+}

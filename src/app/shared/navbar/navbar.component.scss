@@ -1,0 +1,97 @@
+ion-header {
+  background: #0a2722 !important;
+  height: 80px;
+  padding-top: 6px;
+
+  .navbar {
+    z-index: 999;
+    background-color: #ffffff !important;
+    border-radius: 5px;
+    .container-fluid {
+      display: flex;
+      flex-wrap: wrap;
+      .navbar-image {
+        width: 180px;
+        max-width: 160px;
+        object-fit: cover;
+      }
+      .navbar-nav {
+        gap: 25px;
+        a {
+          position: relative;
+          color: #303030 !important;
+          font-size: 14px;
+          line-height: 14px;
+          font-weight: 700;
+          text-transform: uppercase;
+          transition: all 300ms ease;
+          font-family: "Poppins", sans-serif;
+          &:hover {
+            color: #8bc43f !important;
+          }
+        }
+        a.active {
+          color: #8bc43f !important;
+          &::before {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -5px;
+            height: 5px;
+            margin: 0 auto;
+            background: #8bc43f;
+            content: "";
+            transition: all 500ms ease;
+            transition-delay: 0.2s;
+          }
+        }
+      }
+      .btn-login {
+        color: #32b6a1;
+        background-color: #ffffff;
+        border: 2px solid #ffffff;
+        border-radius: 30px;
+        font-family: "Rubik", sans-serif;
+        transition: all 500ms ease;
+        &:hover {
+          background: #ffffff;
+          border-color: #8bc43f;
+          color: #8bc43f;
+        }
+      }
+      .btn-signIn {
+        background: #32b6a1;
+        border: 2px solid #32b6a1;
+        border-radius: 30px;
+        color: #ffffff;
+        font-family: "Rubik", sans-serif;
+        transition: all 500ms ease;
+        &:hover {
+          background: #ffffff;
+          border-color: #8bc43f;
+          color: #8bc43f;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-collapse {
+    margin: 20px 0;
+  }
+  .d-flex {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+figure{
+  margin: 0;
+  img{
+    border-radius: 50%;
+    width: 40px !important;
+    height: 40px !important;
+  }
+}

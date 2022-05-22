@@ -1,0 +1,60 @@
+.login-register {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+  padding: 10% 0;
+  position: fixed;
+}
+
+.login-box {
+  margin: 0 auto;
+  width: 400px;
+}
+.login-box .footer {
+  width: 100%;
+  left: 0px;
+  right: 0px;
+}
+.login-box .social {
+  display: block;
+  margin-bottom: 30px;
+}
+
+#recoverform {
+  display: none;
+}
+.btn {
+  border-radius: 30px;
+  background: #8bc43f;
+  color: #ffffff;
+}
+
+.login-sidebar {
+  padding: 0px;
+  margin-top: 0px;
+}
+.login-sidebar .login-box {
+  right: 0px;
+  position: absolute;
+  height: 100%;
+}
+.card-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img {
+  width: 280px;
+  max-width: 300px;
+}
+.register {
+  color: #2dad98;
+}
+#loginform {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}

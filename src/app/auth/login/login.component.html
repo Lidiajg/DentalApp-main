@@ -1,0 +1,74 @@
+<section
+  id="wrapper"
+  class="login-register login-sidebar"
+  style="background-image: url(../../../../assets/login-register.jpg)"
+>
+  <div class="login-box card">
+    <div class="card-body">
+      <form
+        class="form-horizontal form-material"
+        id="loginform"
+        [formGroup]="loginForm"
+        (submit)="login()"
+      >
+        <a routerLink="/home" class="text-center db"
+          ><img src="../../../../assets/Dento_Logo.png" alt="Home" class="card-img"/></a>
+        <div class="form-group m-t-40">
+          <div class="col-xs-12">
+            <ion-input
+              class="form-control"
+              type="email"
+              formControlName="email"
+              placeholder="Email"
+            ></ion-input>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-12">
+            <ion-input
+              class="form-control"
+              type="password"
+              formControlName="password"
+              placeholder="Contraseña"
+            ></ion-input>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-12">
+            <div class="checkbox checkbox-primary pull-left p-t-0">
+              <input
+                id="checkbox-signup"
+                type="checkbox"
+                class="filled-in chk-col-light-blue me-2"
+              />
+              <label for="checkbox-signup"> Recuerdame </label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-danger">
+            <p *ngIf="formNotValid('email')">* el correo electrónico es obligatorio y debe ser válido</p>
+          </div>
+        </div>
+        <div class="form-group text-center m-t-20">
+          <div class="col-xs-12">
+            <button
+              class="btn btn-lg btn-block text-uppercase btn-rounded"
+              type="submit"
+            >
+              Entrar
+            </button>
+          </div>
+        </div>
+        <div class="form-group m-b-0">
+          <div class="col-sm-12 text-center">
+           ¿No tienes ninguna cuenta?
+            <a routerLink="/signUp" class="register m-l-5"
+              ><b>Registrate</b></a
+            >
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

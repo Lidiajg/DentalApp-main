@@ -1,0 +1,121 @@
+.login-register {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+  padding: 10% 0;
+  position: fixed;
+}
+.img-contain {
+  display: flex;
+  justify-content: center;
+  .img {
+    border-radius: 50% !important;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+  }
+}
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+ion-row {
+  justify-content: center !important;
+}
+ion-fab {
+  position: relative !important;
+  left: 0 !important;
+  ion-fab-button {
+    box-shadow: none !important;
+    margin: 0px auto !important;
+  }
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+.login-box {
+  margin: 0 auto;
+  width: 400px;
+}
+.login-box .footer {
+  width: 100%;
+  left: 0px;
+  right: 0px;
+}
+.login-box .social {
+  display: block;
+  margin-bottom: 30px;
+}
+
+#recoverform {
+  display: none;
+}
+.btn {
+  border-radius: 30px;
+  border: 1px solid #8bc43f;
+  background: #8bc43f;
+  color: #ffffff;
+}
+
+.login-sidebar {
+  padding: 0px;
+  margin-top: 0px;
+}
+.login-sidebar .login-box {
+  right: 0px;
+  position: absolute;
+  height: 100%;
+  overflow-y: scroll;
+}
+.card-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img {
+  width: 280px;
+  max-width: 300px;
+}
+.register {
+  color: #2dad98;
+}
+#loginform {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  + {
+    label {
+      height: 151px;
+      width: 100%;
+      position: relative;
+      bottom: -41px;
+      font-size: 1.25em;
+      border-top-left-radius: none !important;
+      border-bottom-left-radius: none !important;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+    }
+  }
+}
+.label-text {
+  text-align: center;
+  position: relative;
+  top: -41px;
+  right: 14px;
+  margin: 0px;
+}

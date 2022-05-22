@@ -1,0 +1,20 @@
+<div class="container-users">
+    <ion-content fullscreen >
+      <ng-container *ngIf="isUsers; else usersData">
+          <ion-item class="userSkeleton" *ngFor="let item of [].constructor(5)">
+              <ion-avatar slot="start">
+                <ion-skeleton-text animated></ion-skeleton-text>
+              </ion-avatar>
+              <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+            </ion-item>
+      </ng-container>
+      <ng-template #usersData>
+          <ion-card *ngFor="let user of users" (click)="showDetailUser(user)">
+              <img [src]="user.image" />
+              <ion-card-header>
+                <ion-card-title>{{ user.name }} {{ user.lastname }}</ion-card-title>
+              </ion-card-header>
+            </ion-card>
+      </ng-template>
+    </ion-content>
+  </div>
